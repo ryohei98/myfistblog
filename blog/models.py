@@ -18,3 +18,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Question(models.Model):
+    subject = models.SmallIntegerField()
+    unit=models.CharField(max_length=10)
+    question = models.TextField()
+    answer = models.TextField()

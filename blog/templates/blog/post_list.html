@@ -1,22 +1,30 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Django Practice</title>
-</head>
-<body>
-  <div>
-      <h1><a href="/">Django Girls Blog</a></h1>
-  </div>
+{% load static %}
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
 
-  {% for post in posts %}
-      <div>
-          <p>published: {{ post.published_date }}</p>
-          <h1><a href="">{{ post.title }}</a></h1>
-          <p>{{ post.text|linebreaksbr }}</p>
-      </div>
-  {% endfor %}
-</body>
+        <div class="content container">
+            <div class="row" style="margin:auto;">
+                <div class="col-md-12 col-sm-12 main-wrapper mt-2 pt-3">
+                {% for post in posts %}
+                    <div class="card mb-3" style="width:100%;">
+                      <div class="card-body" style="width:100%;">
+                        <h5 class="card-title"><a href="">{{ post.title }}</a></h5>
+                        <h6 class="card-subtitle">published: {{ post.published_date }}</h6>
+                        <p class="card-text">{{ post.text|linebreaksbr }}</p>
+                      </div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
