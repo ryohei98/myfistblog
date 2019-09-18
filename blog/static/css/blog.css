@@ -1,6 +1,4 @@
-body{
-  background-color:rgba(0,255,148,0.3)
-}
+
 
 .page-header {
     width:100%;
@@ -19,12 +17,11 @@ body{
 }
 
 .main-wrapper{
-  margin-top:80px;
   text-align:left;
 }
 
 .card-body{
-  box-shadow:0 3px 1px 1px #bbb;
+  box-shadow:0 3px 1px 3px #bbb;
 }
 
 h1, h2, h3, h4, .card-title {
