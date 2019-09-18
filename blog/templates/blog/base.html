@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,17 +13,21 @@
   <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
 </head>
-<body>
-    <div class="page-header">
-        <h1><a href="/">Django Girls Blog</a></h1>
-    </div>
 
-    <div class="content container">
-        <div class="row" style="margin:auto;">
-            <div class="col-md-12 col-sm-12 main-wrapper mt-2 pt-3">
-            {% block content %}
-            {% endblock %}
-            </div>
-        </div>
+<body>
+  <div class="page-header">
+    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+    <h1><a href="/">Django Girls Blog</a></h1>
+  </div>
+
+  <div class="content container">
+    <div class="row" style="margin:auto;">
+      <div class="col-md-12 col-sm-12 main-wrapper mt-2 pt-3">
+        {% block content %}
+        {% endblock %}
+      </div>
     </div>
-</body></html>
+  </div>
+</body>
+
+</html>

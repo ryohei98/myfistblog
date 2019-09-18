@@ -3,9 +3,13 @@ body{
 }
 
 .page-header {
+    width:100%;
     background-color: #ff9400;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
+    position:fixed;
+    top:0;
+    z-index:10000;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -15,6 +19,7 @@ body{
 }
 
 .main-wrapper{
+  margin-top:80px;
   text-align:left;
 }
 
